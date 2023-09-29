@@ -1,0 +1,10 @@
+Row major Formula or representation of 4D array
+left to right (i1 -> i4)
+
+Let's assume a 4D array a[d1][d2][d3][d4]
+
+for indexing starting from 0
+Add(a[i1][i2][i3][i4]) = L + (i1*d2*d3*d4 + i2*d3*d4 + i3*d4 + i4) * w
+where,
+    L = base address
+    w = size of data type

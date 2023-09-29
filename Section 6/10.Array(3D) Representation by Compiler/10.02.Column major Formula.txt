@@ -1,0 +1,10 @@
+Column major Formula or representation of 3D array
+right to left(i<-k)
+
+Let's assume a 3D array a[l][m][n]
+
+for indexing starting from 0
+Add(a[i][j][k]) = L + (k*l*m + j*l + i) * w
+where,
+    L = base address
+    w = size of data type

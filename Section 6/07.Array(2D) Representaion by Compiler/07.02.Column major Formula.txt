@@ -1,0 +1,26 @@
+Column major formula or representation of 2D array
+elements of the 2D-array are mapped on a 1D-array column by column
+right to left (i <- j)
+
+Let's assume a 2D-array a[m][n] (array with m rows, n columns)
+
+for indexing starting from 0
+Add(a[i][j]) = L + (j * m + i) * w
+where,
+    L = base address
+    i = row index
+    j = column index
+    n = number of columns
+    w = size of data type
+
+for indexing starting from 1
+Add(a[i][j]) = L + {(j - 1) * m + (i - 1)} * w
+where,
+    L = base address
+    i = row index
+    j = column index
+    n = number of columns
+    w = size of data type
+
+indexing starts from 0 in C/C++ because of less number of operations in formula as observed above
+both row major and column major takes equal time, but C/C++ follow row-major formula

@@ -1,0 +1,13 @@
+for array indexing starting from 0
+Add(a[i]) = L + i * w
+where,
+    L = base address
+    i = index
+    w = size of data type
+
+for array indexing starting from 1
+Add(a[i]) = L + (i-1) * w
+where,
+    L = base address
+    i = index
+    w = size of data type

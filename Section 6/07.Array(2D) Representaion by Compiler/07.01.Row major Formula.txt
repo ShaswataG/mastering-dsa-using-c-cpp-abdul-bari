@@ -1,0 +1,25 @@
+Row major formula or representation of 2D array
+elements of the 2D-array are mapped on a 1D-array row by row
+left to right (i -> j)
+
+Let's assume a 2D-array a[m][n] (array with m rows, n columns)
+
+for indexing starting from 0
+Add(a[i][j]) = L + (i * n + j) * w
+where,
+    L = base address
+    i = row index
+    j = column index
+    n = number of columns
+    w = size of data type
+
+for indexing starting from 1
+Add(a[i][j]) = L + {(i - 1) * n + (j - 1)} * w
+where,
+    L = base address
+    i = row index
+    j = column index
+    n = number of columns
+    w = size of data type
+
+indexing starts from 0 in C/C++ because of less number of operations in formula as observed above

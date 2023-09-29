@@ -1,0 +1,22 @@
+type x[l][m][n]
+Add(x[i][j][k]) = L + (i*m*n + j*n + k)*w
+                = L + i*m*n*w + j*n*w + k*w
+
+k * w = t2
+=> k * w = k * 4
+=> w = 4
+
+j*n*w = t1
+=> j * n * w = j * 32
+=> n * w = 32
+=> n = 8 (since w = 4)
+
+i * m * n * w = t0
+=> i * m * 8 * 4 = i * 1024
+=> m  = 1024/(8 * 4)
+=> m = 32
+
+Therefore, m = 32, n = 8, w = 4
+
+float x[?][32][8] matches with option (b) i.e. float x[12][32][8]
+Therefore, (b) is the correct option
