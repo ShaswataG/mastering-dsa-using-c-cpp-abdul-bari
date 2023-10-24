@@ -26,8 +26,8 @@ void SortedInsert(struct Node* p, int x) {
     t = new Node;
     t->data = x;
     t->next = NULL;
-    if (!p) {
-        p = t;
+    if (!first) {
+        first = t;
     } else {
         while (p && p->data < x) {
             q = p;

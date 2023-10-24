@@ -3,8 +3,8 @@ using namespace std;
 
 struct Node {
     int data;
-    struct Node* next; 
-}* first = NULL;
+    struct Node* next;
+} * first;
 
 void create(int a[], int n) {
     Node* t, * last;
@@ -29,12 +29,23 @@ void Display(struct Node* p) {
         cout << p->data << " ";
         p = p->next;
     }
+    cout << endl;
+}
+
+void Reverse(Node* q, Node* p) {
+    if (p) {
+        Reverse(p, p->next);
+        p->next, q;
+    } else {
+        first = q;
+    }
 }
 
 int main() {
-    int A[] = {3, 5, 7, 10, 15};
-    struct Node* p;
-    create(A, 5);
+    int a[5] = {2, 3, 5, 7, 9};
+    create(a, 5);
+    Display(first);
+    Reverse(NULL, first);
     Display(first);
     return 0;
 }
