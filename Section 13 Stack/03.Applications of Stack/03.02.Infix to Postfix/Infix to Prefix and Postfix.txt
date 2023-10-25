@@ -1,0 +1,77 @@
+Conversion of infix to prefix and postfix:
+1) a+b*c
+    Prefix:
+        (a+(b*c)) = (a+[*bc]) = +a*bc
+    Postfix:
+        (a+(b*c)) = (a+[bc*]) = abc*+
+2) a+b+c*d
+    Prefix:
+        (a+b+(c*d)) = (a+b+[*cd]) = [+ab]+[*cd] = ++ab*cd
+    Postfix:
+        (a+b+(c*d)) = (a+b+[cd*]) = [ab+]+[cd*] = ab+cd*+
+3) (a+b)*(c-d)
+    Prefix:
+        [+ab]*(c-d) = (+ab)*[-cd] = *+ab-cd
+    Postfix:
+        [ab+]*(c-d) = [ab+]*[cd-] = ab+cd-*
+4)  a+b+c-d
+    Postfix:
+        (((a+b)+c)-d) = (([ab+]+c)-d) = ([ab+c+]-d) = ab+c+d-
+5)  a=b=c=5
+    Postfix:
+        (a=(b=(c=5))) => (a=(b=[c5=])) => (a=[bc5==]) => abc5===
+
+6)  a^b^c
+    Postfix:
+        (a^(b^c)) => (a^[bc^]) => abc^^
+
+Unary operators- They usually have highest precedence in languages and they have R-L (right to left) associativity
+7)  -a
+    Prefix:
+        [-a] = -a
+    Postfix:
+        [a-] = a-
+
+8)  *p (deferencing a pointer)
+    Prefix:
+        *p
+    Postfix:
+        p*
+
+9)  **p
+    R-L
+    Prefix:
+        (*(*p)) = (*[*p]) = **p
+    Postfix:
+        (*(*p)) = (*[p*]) = p**
+
+10) n!
+    Prefix:
+        !n
+    Postfix:
+        n!
+
+11) log x
+    R-L
+    Prefix:
+        log x
+    Postfix:
+        x log
+
+12) -a+b*log n!
+    here, assume all the unary operators i.e. -, log, ! have the same precendence, so considering R-L
+    Prefix:
+        (-a)+(b*(log(n!))) => (-a)+(b*log[!n]) => (-a)+[*blog!n] => [-a]+*blog!n => +-a*blog!n
+    Postfix:
+        (-a)+(b*(log(n!))) => (-a)+(b*(log[n!])) => (-a)+(b*[n!log]) => [a-]+(b*[n!log]) => [a-]+bn!log* => a-bn!log*+
+Note:
+    i) when two similar operators are present in the same expression, we consider it from left hand side.
+    ii) Symbol  Precedence  Assoiativity
+         +,-        1           L-R
+         *,/        2           L-R
+         ^          3           R-L
+         -          4           R-L
+         ()         5           L-R
+    iii) unlike mathematics, + and - have same precidence in programming. Same is true for * and /.
+
+
