@@ -1,0 +1,4 @@
+Drawbacks of linear queue using array
+i) we cannot reuse spaces of deleted element
+ii) every location can be used only once
+iii) situation arises when queue is empty and full at the same time

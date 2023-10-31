@@ -23,6 +23,8 @@ void Create(int a[], int n) {
         last = t;
     }
     last->next = head;
+    head->prev = last;
+
 }
 
 void Display(struct Node* p) {
