@@ -24,7 +24,6 @@ void Create(int a[], int n) {
     }
     last->next = head;
     head->prev = last;
-
 }
 
 void Display(struct Node* p) {
@@ -36,12 +35,13 @@ void Display(struct Node* p) {
 }
 
 int Length(struct Node* p) {
-    int l = 0;
+    int len = 0;
     while (p) {
-        l++;
+        len++;
         p = p->next;
+        if (p == head) return len;
     }
-    return l;
+    return len;
 }
 
 void Insert(struct Node* p, int index, int x) {

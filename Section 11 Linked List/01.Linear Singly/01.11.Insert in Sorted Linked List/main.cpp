@@ -35,7 +35,6 @@ void SortedInsert(struct Node* p, int x) {
         }
         if (p == first) {
             t->next = first;    // doubt
-            // p = t;
             first = t;
         } else {
             t->next = q->next;

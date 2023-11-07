@@ -1,0 +1,43 @@
+For no of nodes = n,
+total no. of binary trees possible for unlabelled nodes = T(n) = 2nCn/(n+1) (combination formula for catalan number)
+total no. of binary trees possible for unlabelled nodes = T(n) = Summation i=1 to i=n T(i-1)*T(n-i) (recursive formula for catalan number)
+total no. of binary trees possible for labelled nodes = T(n) = 2nCn/(n+1) * n! (2nCn/(n+1) -> shapes possible, n! -> fillings possible for each shape)
+max. height = n-1
+min. height = h = log2(n+1)-1
+no. of binary trees possible with max. height = 2^(n-1)
+
+For height = h,
+minimum no. of nodes = h+1
+maximum no. of nodes = 2^(h+1)-1
+
+Height of a binary tree
+log2(n+1)-1 <= h <= n-1     (O(logn) <= h <= O(n))
+
+Number of nodes in a binary tree
+h+1 <= n <= 2^(h+1)-1
+
+degree of node = number of children of a node
+internal nodes = nodes with degree greater than 0
+external nodes = nodes with degree 0
+leaf nodes = nodes with degree 0
+siblings = nodes with same parent
+
+deg(x) = number of nodes with degree x
+deg(0) = deg(2)+1
+
+general binary tree = each nodes can have degree equal to 0, 1 or 2
+strict binary tree = each nodes must have degree equal to either 0 or 2
+
+For strict binary tree
+    Given, height = h
+    minimum no. of nodes = (2*h)+1
+    maximum no. of nodes = 2^(h+1)-1 (same as general binary tree) 
+    Given, number of nodes = n
+    minimum height = log2(n+1)-1    (from formula for minimum number of nodes when height = h)
+    maximum height = h = (n-1)/2
+    
+    e=i+1
+    where, e = no. of external nodes
+           i = no. of internal nodes
+
+

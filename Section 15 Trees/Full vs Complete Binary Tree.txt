@@ -1,0 +1,9 @@
+Full binary tree - a binary tree of height h with maximum number of nodes (i.e n = 2^(h+1)-1)
+
+Complete binary tree - if there are no blank spaces in between the elements in the array representation of a binary tree, then the binary tree is called a complete binary tree
+
+Book definition of Complete binary tree - 
+A complete binary tree of height h will be a full binary tree upto h-1 height and in the last level the elements will be filled from left to right without skipping any element
+
+Note: a full binary tree is always a complete ninary tree but a complete binary tree is not always a full binary tree
+

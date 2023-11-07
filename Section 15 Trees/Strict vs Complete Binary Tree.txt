@@ -1,0 +1,1 @@
+If Strict called Complete, then complete called Almost complete

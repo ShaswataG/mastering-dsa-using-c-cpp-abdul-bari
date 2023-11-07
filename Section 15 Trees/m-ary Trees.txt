@@ -1,0 +1,29 @@
+m-ary tree- every node in the tree can have atmost m children
+
+For 3-ary tree
+    Its not necessary for any node to have 3 children, even a binary tree can be called a 3-ary tree as, its highest degree is less than 3
+    What matters is the maximum capacity of children of a node, which is 3 in this case
+    Given, height = h
+        minimum no. of nodes = 3h+1
+        maximum no. of nodes = (3^(h+1)-1)/2
+    Given, no. of nodes = n
+        maximum height = (n-1)/3
+        minimum height = log3[3n+1]-1
+
+Degree of m-ary tree = {0, 1, 2, ... m}
+ex- degree 3-ary tree = {0, 1, 2, 3}
+
+Strict m-ary tree- every node can have either 0 or exactly m children
+
+For Strict m-ary tree,
+    Given, height = h
+        minimum no. of nodes = mh+1
+        maximum no. of nodes = (m^(h+1)-1)/(m-1)
+    Given, no. of nodes = n
+        maximum height = (n-1)/m
+        minimum height = logm[n(m-1)+1]-1
+    Relationship b/w no. of internal and external nodes is given by-
+        e=(m-1)i+1
+        where, e = no. of external nodes
+               i = no. of internal nodes
+               

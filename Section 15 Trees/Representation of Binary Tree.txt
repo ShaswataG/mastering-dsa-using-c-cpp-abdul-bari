@@ -1,0 +1,21 @@
+Array representation
+it can be static as well as dynamic
+             A
+           /   \
+         B       C
+       /  \     /  \
+     D      E  F     G
+
+    A B C D E F G
+    1 2 3 4 5 6 7
+
+    Let element be at index i
+    index of left child = 2*i
+    index of right child = (2*i)+1
+    index of parent = floor(i/2)
+
+Linked representation
+it is always dynamic
+we don't call it Linked list represetation, because list means linear but tree is non linear data structure
+For any shape of binary tree, represented using linked representation,
+number of null pointers = n (where n = number of nodes)
