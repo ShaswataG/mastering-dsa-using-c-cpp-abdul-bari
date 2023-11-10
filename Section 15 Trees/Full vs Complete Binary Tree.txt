@@ -6,4 +6,3 @@ Book definition of Complete binary tree -
 A complete binary tree of height h will be a full binary tree upto h-1 height and in the last level the elements will be filled from left to right without skipping any element
 
 Note: a full binary tree is always a complete ninary tree but a complete binary tree is not always a full binary tree
-

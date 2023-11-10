@@ -1,0 +1,6 @@
+Definitions:
+    Preorder: visit(node), Preorder(left subtree), Preorder(right subtree)
+    Inorder: Inorder(left subtree), visit(node), Inorder(right subtree)
+    Postorder: Postorder(left subtree), Postorder(right subtree), visit(node)
+    Level order: Level by level
+
