@@ -1,0 +1,9 @@
+If any one traverasal (preorder/postorder/inorder/levelorder) is given, no. of trees that can be generated = 2nCn/(n+1)   (catalan no.)
+
+If both preorder and postorder are given, more than one binary trees are possible (not a catalan no.)
+
+If either (preorder+inorder) or (postorder+inorder) are given, then a single tree can be generated
+
+For generating a tree-
+    Any two traverals must be known
+    Out ot that, one of the traversal must be inorder

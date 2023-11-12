@@ -62,33 +62,40 @@ void Tree::Create() {
 }
 
 void Tree::Preorder(Node* p) {
+    cout << "Preorder : ";
     if (p) {
         cout << p->data << " ";
         Preorder(p->lchild);
         Preorder(p->rchild);
     }
+    cout << endl;
 }
 
 void Tree::Postorder(Node* p) {
+    cout << "Postorder : ";
     if (p) {
         Postorder(p->lchild);
         Postorder(p->rchild);
         cout << p->data << " ";
     }
+    cout << endl;
 }
 
 void Tree::Inorder(Node* p) {
+    cout << "Inorder : ";
     if (p) {
         Inorder(p->lchild);
         cout << p->data << " ";
         Inorder(p->rchild);
     }
+    cout << endl;
 }
 
 void Tree::Levelorder(Node* p) {
     queue<Node*> q;
     cout << p->data << " ";
     q.push(p);
+    cout << "Levelorder : ";
     while (!q.empty()) {
         p = q.front();
         q.pop();
@@ -101,6 +108,7 @@ void Tree::Levelorder(Node* p) {
             q.push(p->rchild);
         }
     }
+    cout << endl;
 }
 
 int Tree::Height(Node* p) {
@@ -114,20 +122,14 @@ int Tree::Height(Node* p) {
     else return y+1;
 }
 
+
+
 int main() {
     Tree t;
     t.Create();
-    cout << "Preorder : ";
     t.Preorder(t.root);
-    cout << endl;
-    cout << "Postorder : ";
     t.Postorder(t.root);
-    cout << endl;
-    cout << "Inorder : ";
     t.Inorder(t.root);
-    cout << endl;
-    cout << "Levelorder : ";
     t.Levelorder(t.root);
-    cout << endl;
     return 0;
 }
