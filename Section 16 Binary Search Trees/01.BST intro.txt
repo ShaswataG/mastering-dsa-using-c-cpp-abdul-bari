@@ -1,0 +1,8 @@
+Properties of BST:
+    i) no duplicates
+    ii) inorder gives sorted order
+    iii) no. of bst for n nodes
+
+Inorder of a BST given:
+no. of shapes possible for n no. of nodes = 2nCn/(n+1)  (catalan no.)
+for one shape, key elements can be filled in only way
