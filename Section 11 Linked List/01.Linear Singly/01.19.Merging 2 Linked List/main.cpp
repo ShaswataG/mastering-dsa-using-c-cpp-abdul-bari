@@ -59,7 +59,7 @@ where,
         last = p;
         p = p->next;
         third->next = NULL;
-    } else {
+    } else { 
         third = q;
         last = q;
         q = q->next;
