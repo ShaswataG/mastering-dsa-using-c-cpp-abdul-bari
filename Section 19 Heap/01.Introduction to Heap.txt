@@ -1,0 +1,10 @@
+Conditions for a heap:
+    i) it is a complete binary Tree or almost complete binary tree
+    ii) it can have either of the two possibilities- max heap & min heap
+
+Note- i) heaps are represented using array
+      ii) since heap is a complete binary tree, its height = log(n)
+      iii) heap is not used for searching purpose
+
+Max heap- every node should have an element greater than or equal to all its descendants (duplicates are also allowed unlike BST)
+Min heap- every node should have an element smaller than or equal to all its descendants

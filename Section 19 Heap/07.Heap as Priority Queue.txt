@@ -1,0 +1,4 @@
+if higher no., more priority -> use max heap
+if lower no., more priority -> use min heap
+
+both insertion and deletion takes TC = O(log2(n)) when implementing priority queue using heap
