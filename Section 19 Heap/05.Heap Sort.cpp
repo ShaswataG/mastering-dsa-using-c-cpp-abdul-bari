@@ -1,6 +1,13 @@
 using namespace std;
 #include<iostream>
 
+/*
+TC=  O(nlog2(n))
+
+since it can take maximum log2(n) time for each node, and there are n nodes
+so, total maximum time taken = n * log2(n)
+*/
+
 void swap(int& a, int& b) {
     int temp = a;
     a = b;
@@ -45,14 +52,15 @@ int main() {
     for (int i = 2; i <= 7; i++) {
         Insert(H, i);
     }
+    cout << "Before sorting : ";
     for (int i = 1; i <= 7; i++) {
         cout << H[i] << " ";
     }
     cout << endl;
-    // cout << "Deleted element is : " << Delete(H, 7) << endl;
     for (int i = 7; i > 1; i--) {
         Delete(H, i);
     }
+    cout << "After sorting : ";
     for (int i = 1; i <= 7; i++) {
         cout << H[i] << " ";
     }
