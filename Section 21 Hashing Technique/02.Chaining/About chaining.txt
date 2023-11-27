@@ -1,0 +1,14 @@
+each index in hashh table (array) can store a pointer to a node
+hash function is decided by programmer based on given data, it is subjective
+
+suppose hash function is given by- h(x) = x%10
+    hash table is of size 10, suppose we need to search 23
+    h(23) = 23%10 = 3
+    Hash[23] stores the pointer to a chain of elements with 2 at unit's digit
+
+loading factor (lamda) = n/size
+    where, n = no. of elements
+           size = size of hash table
+
+average successful search = 1+(lamda/2)
+average unsuccessful search = 1+lamda
