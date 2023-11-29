@@ -42,26 +42,26 @@ void IMergeSort(int a[], int n) {
 
 //Abdul bari's version, doubt?
 
-// void IMergeSort2(int a[], int n) {
-//     int i, p, l, h, mid;
-//     for (p = 2; p <= n; p *= 2) {
-//         for (int i = 0; i+p-1 < n; i += p) {
-//             l = i;
-//             h = i+p-1;
-//             mid = (l+h)/2;
-//             merge(a, l, mid, h);
-//         }
-//         if (n-i > p/2) {
-//             l = i;
-//             h = i+p-1;
-//             mid = (l+h)/2;
-//             merge(a, l, mid, n-1);
-//         }
-//     }
-//     if (p/2 < n) {
-//         merge(a, 0, p/2-1, n-1);
-//     }
-// }
+void IMergeSort2(int a[], int n) {
+    int i, p, l, h, mid;
+    for (p = 2; p <= n; p *= 2) {
+        for (int i = 0; i+p-1 < n; i += p) {
+            l = i;
+            h = i+p-1;
+            mid = (l+h)/2;
+            merge(a, l, mid, h);
+        }
+        if (n-i > p/2) {
+            l = i;
+            h = i+p-1;
+            mid = (l+h)/2;
+            merge(a, l, mid, n-1);
+        }
+    }
+    if (p/2 < n) {
+        merge(a, 0, p/2-1, n-1);
+    }
+}
 
 
 
@@ -69,7 +69,7 @@ void RMergeSort(int a[], int l, int h) {
 /*
 TC = O(nlog2(n))    (no best or worst case, this is the average TC)
 SC = O(n+log2(n))
-In comparison bases sorting, merge sort is the only algo that requires extra shape
+In comparison based sorting, merge sort is the only algo that requires extra space
 */
     int mid;
     if (l < h) {
@@ -89,10 +89,10 @@ void display(int a[], int n) {
 }
 
 int main() {
-    int a[] = {5, 2, 3, 1, 9, 7, 0}, n = 7;
+    int a[] = {5, 2, 3, 1, 9, 7, 0}, n = 6;
     display(a, n);
-    // IMergeSort(a, n);
-    RMergeSort(a, 0, 6);
+    IMergeSort(a, n);
+    // RMergeSort(a, 0, 6);
     display(a, n);
     return 0;
 }
