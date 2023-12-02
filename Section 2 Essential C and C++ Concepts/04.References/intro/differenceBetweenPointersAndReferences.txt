@@ -1,0 +1,4 @@
+        Pointers                                         References
+can be kept uninitialized                   must be initialized at the time of declaring
+consumes space                              doesn't consume space
+can be changed to store different address   cant't be changed once declared

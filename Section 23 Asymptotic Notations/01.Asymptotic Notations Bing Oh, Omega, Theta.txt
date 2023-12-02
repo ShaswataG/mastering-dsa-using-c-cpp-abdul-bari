@@ -1,0 +1,19 @@
+1 < logn < n < nlogn < n^2 < n^3 < ..... < 2^n < 3^n < 4^n < ... < n^n
+
+Polynomial TC = 1, logn, n, nlogn, n^2, n^3
+Exponential TC = 2^n, 3^n, 4^n .... n^n
+
+the order is valid for large values of n
+Ex: if n = 2, n^3 = 8 whereas 2^2 = 4, order is not followed
+    if n = 10, n^3 = 1000 whereas 2^10 = 1024, order is followed
+
+Conclusion: From some value of n, the order is followed
+
+Lower bound: omega(Ω)
+Upper bound: Big Oh(O)
+Tight bound: theta(Θ)
+
+We use the above notations, when its difficult or not possible to find the exact polynomial or formula for functions
+Ex: for the time function ∑ni=1 i*2^i, instead of evaluating it, we can write it as O(n2^n) or Ω(2)
+
+When we can evaluate the exact time function, we use theta(Θ)
