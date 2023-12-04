@@ -1,0 +1,10 @@
+Properties of Hash Function:
+    i)  keys in a hash table should be uniformly distributed, they shouldn't be concentrated at the same place (to avoid collision)
+    ii) it should give the same index every time (while storing and searching)
+
+while designing a hash function:
+    i)  based on key values
+    ii) requirement
+
+chaining, size of hash table can be anything
+linear probing, size of hash table must be twice of number of keys
