@@ -6,28 +6,32 @@ struct Node {
     Node* next;
 };
 
-void SortedInsert(Node** p, int x) {
+void SortedInsert(Node** H, int x) {
     Node* t = new Node;
     t->data = x;
     t->next = NULL;
-    if (!p) {
-        *p = t;
+    if (!*H) {
+        *H = t;
     } else {
-        Node* r = *p;
+        Node* p = *H;
         Node* q = NULL;
-        while (r && x > r->data) {
-            q = r;
-            r = r->next;
+        while (p && x > p->data) {
+            q = p;
+            p = p->next;
         }
-        if (r = *p)
-            *p = t;
-        t->next = r;
-        if (q) q->next = t;
+        if (p = *H) {
+            *H = t;
+            t->next = p;
+        }
+        if (q) {
+            q->next = t;
+            t->next = p;
+        }
     }
 }
 
-Node* Search(Node** H, int key) {
-    Node* p = *H;
+Node* Search(Node* H, int key) {
+    Node* p = H;
     while (p) {
         if (key == p->data) return p;
         p = p->next;
@@ -38,13 +42,15 @@ Node* Search(Node** H, int key) {
 Node* Delete(Node** H, int key) {
     Node* p = *H;
     Node* q = NULL;
-    while (p) {
+    Node* t;
+
+    while (p && p->data != key) {
         q = p;
-        if (key == p->data) {
-            Node* t = p;
-            int x = t->data;
-        }
+        p = p->next;
     }
+    if (q) q->next = p->next;
+
+    delete p;
 }
 
 int HashFunction(int x) {
@@ -55,12 +61,42 @@ void Insert(Node* H[], int key) {
     SortedInsert(&H[HashFunction(key)], key);
 }
 
+void displayNodes(Node* p) {
+    while (p) {
+        cout << "->" << p->data;
+        p = p->next;
+    }
+    cout << endl;
+}
+
+void displayTable(Node* HT[], int n) {
+    for (int i = 0; i < n; i++) {
+        cout << "HT[" << i << "]";
+        displayNodes(HT[i]);
+        cout << endl;
+    }
+}
+
 int main() {
-    Node* H[10];
-    // int a[] = {3, 1, 43, 23, 12, 55, 2, 7, 13, 90, n = 10};
-    // for (int i = 0; i < n; i++) {
-    //     SortedInsert(H[HashFunction(a[i])], a[i]);
-    // }
+    Node* HT[10];
+    for (int i = 0; i < 10; i++) {
+        HT[i] = NULL;
+    }
+
+    int a[] = {3, 1, 43, 23, 12, 55, 2, 7, 13, 90}, n = 10;
+    for (int i = 0; i < n; i++) {
+        Insert(HT, a[i]);
+    }
+
+    Node* temp = Search(HT[HashFunction(33)], 3);
+    if (!temp) {
+        cout << "Not found" << endl;
+    } else {
+        cout << temp->data << endl;    
+    }
     
+    // displayTable(HT, 10);    // not working, infinite loop
+    
+
     return 0;
 }
