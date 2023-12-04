@@ -1,0 +1,15 @@
+hash function, h(x)=x%10
+modified hash function, h'(x) = (h(x)+f(i))     where, i = 0, 1, 2, 3 ....
+for entering a key, it keeps on incrementing i until modified hash function gives an empty index
+for searching a key, it keeps on incrementing i until modified hash function gives an empty index
+
+Loading factor, λ = n/size
+for probing, λ <= 0.5 (must)    (no. of keys inserted should not be more than half of size of hash table)
+Avg. successful search, t = 1/λ *(ln(1/(1-λ)))
+Avg. unsuccessful search, t = 1/(1-λ)
+
+deletion in linear Probing is not recommended, as after deleting at an index, that index remains vacant
+because of this vacancy, searching for an element in the future might give result as unsuccessful search though an element is present, because once it finds the vacancy, search function will exit
+so, there are two solutions for deletion in linear probing:
+    rehashing: once an element is deleted, all the other keys are inserted again in the hash table, so that the vacancy is filled by the next element
+    flag variable: flag variable for each index representing whether an element was deleted earlier at that index, so that searching doesn't exit unnecessarily   doubt?
