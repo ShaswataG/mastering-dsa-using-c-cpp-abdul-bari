@@ -1,10 +1,17 @@
 hash function, h(x)=x%10
-modified hash function, h'(x) = (h(x)+f(i))     where, i = 0, 1, 2, 3 ....
+probe function, h'(x) = (h(x)+f(i))
+    where, f(i) = i
+           i = 0, 1, 2, 3 ....
+
 for entering a key, it keeps on incrementing i until modified hash function gives an empty index
 for searching a key, it keeps on incrementing i until modified hash function gives an empty index
 
-Loading factor, λ = n/size
+Loading factor, λ = n/size      
+    where, n = no. of keys
+           size = size of hash table
+
 for probing, λ <= 0.5 (must)    (no. of keys inserted should not be more than half of size of hash table)
+
 Avg. successful search, t = 1/λ *(ln(1/(1-λ)))
 Avg. unsuccessful search, t = 1/(1-λ)
 
@@ -13,3 +20,8 @@ because of this vacancy, searching for an element in the future might give resul
 so, there are two solutions for deletion in linear probing:
     rehashing: once an element is deleted, all the other keys are inserted again in the hash table, so that the vacancy is filled by the next element
     flag variable: flag variable for each index representing whether an element was deleted earlier at that index, so that searching doesn't exit unnecessarily   doubt?
+
+Drawbacks of Linear Probing:
+    i)  half of the hash table should be kept vacant, space wasted
+    ii) many keys might be accumulating at one place, and thereby forming a cluster (called primary clustering of keys)
+        primary clustering of keys consumes lot of time in searching as unsuccesful search exits only when it finds a vacant index (compares with each element in the cluster until it finds vacancy)
