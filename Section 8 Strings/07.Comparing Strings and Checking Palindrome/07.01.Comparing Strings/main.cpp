@@ -23,10 +23,10 @@ void compare2(char* a, char* b) {
 void compare3(char* a, char* b) {
     int i, j;
     for (i = 0; a[i] != '\0' && b[i] != '\0'; i++) {
-        if (a[i] >= 'A' && a[i] < 'Z') {
+        if (a[i] >= 'A' && a[i] <= 'Z') {
             a[i] += 32;
         }
-        if (b[i] >= 'A' && b[i] < 'Z') {
+        if (b[i] >= 'A' && b[i] <= 'Z') {
             b[i] += 32;
         }
     }

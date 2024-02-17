@@ -23,10 +23,12 @@ void Create(int a[], int n) {
 
 struct Node* LSearch1(struct Node* p, int key) {
 // Move to head
-    struct Node* q;
+    struct Node* q = NULL;
     while (p) {
         if (key == p->data) {
-            q->next = p->next;
+            if (q) {
+                q->next = p->next;
+            }
             p->next = first;
             first = p;
             return p;
@@ -53,7 +55,7 @@ int main() {
     Create(a, 5);
     Display(first);
     cout << endl;
-    cout << LSearch1(first, 7) << endl;
+    cout << LSearch1(first, 2) << endl;
     Display(first);
     cout << endl;
     cout << LSearch1(first, -7) << endl;

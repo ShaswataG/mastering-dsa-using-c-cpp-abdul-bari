@@ -27,8 +27,10 @@ for average case,
 so, average case, O(n)
 */
     for (int i = 0; i < a->length; i++) {
-        if (key == a->A[i]) {
+        if (key == a->A[i] && i != 0) {
             swap(a->A[i], a->A[i-1]);
+            return i;
+        } else if (key == a->A[i] && i == 0) {
             return i;
         }
     }

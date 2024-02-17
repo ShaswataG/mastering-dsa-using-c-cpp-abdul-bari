@@ -48,20 +48,20 @@ int Delete(int a[], int n) {
 }
 
 int main() {
-    int H[] = {0, 2, 5, 8, 9, 4, 10, 7};
-    for (int i = 2; i <= 7; i++) {
+    int H[] = {0, 1, 3, 5, 7, 9};
+    for (int i = 2; i <= 5; i++) {
         Insert(H, i);
     }
     cout << "Before sorting : ";
-    for (int i = 1; i <= 7; i++) {
+    for (int i = 1; i <= 5; i++) {
         cout << H[i] << " ";
     }
     cout << endl;
-    for (int i = 7; i > 1; i--) {
+    for (int i = 5; i > 1; i--) {
         Delete(H, i);
     }
     cout << "After sorting : ";
-    for (int i = 1; i <= 7; i++) {
+    for (int i = 1; i <= 5; i++) {
         cout << H[i] << " ";
     }
     cout << endl;

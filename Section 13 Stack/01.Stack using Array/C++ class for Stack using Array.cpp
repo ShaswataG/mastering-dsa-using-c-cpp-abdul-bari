@@ -33,7 +33,7 @@ void Stack::Display() {
     if (top == -1)
         cout << "Stack underflow!" << endl;
     else {
-        for (int i = s[top]; i >= 0; i++) {
+        for (int i = top; i >= 0; i++) {
             cout << s[i] << " ";
         }
         cout << endl;

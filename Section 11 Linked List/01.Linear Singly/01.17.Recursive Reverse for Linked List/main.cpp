@@ -35,7 +35,7 @@ void Display(struct Node* p) {
 void Reverse(Node* q, Node* p) {
     if (p) {
         Reverse(p, p->next);
-        p->next, q;
+        p->next, q;     // doubt
     } else {
         first = q;
     }

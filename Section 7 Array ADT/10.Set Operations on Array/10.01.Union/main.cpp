@@ -13,13 +13,13 @@ Array* Union_unsorted(Array a, Array b) {
     int k = 0;
     for(int i = 0; i < b.length; i++) {
         int found = 0;
-        for (int j = 0; j < a.length; i++) {
+        for (int j = 0; j < a.length; j++) {
             if (b.A[i] == c->A[j]) {
                 found = 1;
                 break;
             }
         }
-        if(found == 1) {
+        if(found == 0) {
             c->A[k+a.length] = b.A[i];
             k++;
         }
@@ -32,15 +32,9 @@ Array* Union_sorted(Array a, Array b) {
     Array* c = new Array;
     while(i < a.length && j < b.length) {
         if (a.A[i] < b.A[j]) {
-            // c->A[k] = a.A[i];
             c->A[k++] = a.A[i++];
-            // i++;
-            // k++;
         } else if (a.A[i] > b.A[j]) {
-            // c->A[k] = a.A[j];
             c->A[k++] = a.A[j++];
-            // j++;
-            // k++;
         } else {
             // c->A[k] = a.A[i];
             c->A[k++] = a.A[i++];

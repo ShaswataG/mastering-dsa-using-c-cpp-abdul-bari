@@ -4,10 +4,8 @@ using namespace std;
 struct Queue {
     int* Q;
     int size;
-    int rear= -1;;
+    int rear= -1;
 };
-
-
 /*
 Increasing value, decreasing priority
 */
@@ -15,7 +13,6 @@ void Insert(Queue* q, int x) {
 /*
 TC = O(1)
 */
-
     if (q->rear == q->size-1) cout << "Queue is full." << endl;
     else {
         q->rear++;

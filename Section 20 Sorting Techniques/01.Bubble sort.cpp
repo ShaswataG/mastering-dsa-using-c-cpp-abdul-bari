@@ -15,6 +15,7 @@ min swaps = O(1)
 max comparison = O(n^2)
 min comparison = O(n)
 */
+
 void bubbleSort1(int a[], int n) {
     int m = n-1;
     for (int i = 0; i < n-1; i++) {
@@ -52,6 +53,7 @@ void display(int a[], int n) {
     cout << endl;
 }
 
+
 int main() {
     int a[] = {3, 1, 5, 3, 9, 11, 17, 7}, n = 8;
     cout << "Before sorting, list : ";
@@ -59,5 +61,5 @@ int main() {
     bubbleSort2(a, n);
     cout << "After sorting, list : ";
     display(a, n);
-    return 0; 
+    return 0;
 }

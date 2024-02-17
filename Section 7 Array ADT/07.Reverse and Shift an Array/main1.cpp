@@ -6,6 +6,11 @@ struct Array {
 };
 
 void Reverse1(struct Array* a) {
+/*
+TC = O(n)
+SC = O(n)
+AS = O(n)
+*/
     int* b = new int[a->length];
     for (int i = 0; i < a->length; i++) {
         b[i] = a->A[a->length - i - 1];
@@ -16,6 +21,11 @@ void Reverse1(struct Array* a) {
 }
 
 void Reverse2(struct Array* a) {
+/*
+TC = O(n)
+SC = O(n)
+AS = O(1)
+*/
     for (int  i = 0; i < a->length/2; i++) {
         int temp = a->A[i];
         a->A[i] = a->A[a->length-i-1];

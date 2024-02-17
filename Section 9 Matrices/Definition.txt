@@ -1,0 +1,1 @@
+Diagonal matrix: for all elements, a[i][j] = 0 if i≠j

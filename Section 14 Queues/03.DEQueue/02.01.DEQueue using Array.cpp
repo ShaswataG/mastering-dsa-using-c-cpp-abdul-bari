@@ -57,7 +57,7 @@ void Display(DEQueue q) {
     if (q.front >= q.rear) {
         cout << "Queue is empty." << endl;
     } else {
-        for (int i = q.front+1; i <q.rear; i++) {
+        for (int i = q.front+1; i <= q.rear; i++) {
             cout << q.Q[i] << " ";
         }
         cout << endl;

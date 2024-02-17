@@ -36,7 +36,7 @@ int Dequeue(struct Queue* q) {
 void Display(struct Queue q) {
     if (q.front == q.rear) cout << "Queue is empty!" << endl;
     else {
-        for (int i = q.front+1; i <= q.rear; i++)
+        for (int i = q.front+1; i <= q.rear; i = (i+1)%q.size)
         {
             cout << q.Q[i] << " ";
         }

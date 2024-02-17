@@ -8,6 +8,6 @@ Double hashing reduces collision
 
 Let,
 h1(x) = x%10    (regular hash function)
-h2(x) = R - (s%R)   or we can consider any other hash function also
+h2(x) = R - (x%R)   or we can consider any other hash function also
 h'(x) = (h1(x)+i*h2(x))%10      (modified hash function) 
     where, i = 0, 1, 2, 3....   
